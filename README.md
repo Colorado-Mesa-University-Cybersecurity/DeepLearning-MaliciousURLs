@@ -10,23 +10,21 @@ Detecting and Classifying Malicious URLs using Deep Learning Techniques
 ## Data Cleanup
 
 -   dropped samples with Infinitiy values
--   dropped samples witn NaN values; half of the lables are dropped
-    -   without dropping NaN; results were terrible ( < 50% accuracy ) on All.csv dataset
 
 ## Datasets Summary
 
 ### All.csv
 
--   labeled 5 URL types with total 18982 samples
+-   labeled 5 URL types with total 36697 samples
     -   build model to classify malicious URLs
 
 | URL Type   | Total |
 | ---------- | ----: |
-| spam       |  5342 |
-| phishing   |  4014 |
-| Defacement |  2477 |
-| benign     |  2709 |
-| malware    |  4440 |
+| spam       |  6698 |
+| phishing   |  7586 |
+| Defacement |  7930 |
+| benign     |  7781 |
+| malware    |  6712 |
 
 # Deep Learning Frameworks
 
@@ -52,7 +50,7 @@ Detecting and Classifying Malicious URLs using Deep Learning Techniques
 
 | Framework        | Accuracy (%) |
 | ---------------- | -----------: |
-| Fastai-Pytorch   |        96.89 |
+| Fastai-Pytorch   |        97.08 |
 | Keras-Tensorflow |           \* |
 | Keras-Theano     |           \* |
 
@@ -62,7 +60,7 @@ Detecting and Classifying Malicious URLs using Deep Learning Techniques
 
 | Framework        | Accuracy (%) |
 | ---------------- | -----------: |
-| Fastai-Pytorch   |        98.71 |
+| Fastai-Pytorch   |        98.83 |
 | Keras-Tensorflow |           \* |
 | Keras-Theano     |           \* |
 

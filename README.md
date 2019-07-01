@@ -17,7 +17,7 @@ Detecting and Classifying Malicious URLs using Deep Learning Techniques
 
 ### All.csv
 
--   labeled 4 malware types with total 18982 samples
+-   labeled 5 URL types with total 18982 samples
     -   build model to classify malicious URLs
 
 | URL Type   | Total |

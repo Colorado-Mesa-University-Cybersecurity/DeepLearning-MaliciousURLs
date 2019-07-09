@@ -9,7 +9,7 @@ Detecting and Classifying Malicious URLs using Deep Learning Techniques
 
 ## Data Cleanup
 
--   dropped samples with Infinitiy values
+-   dropped samples with Infinity and NaN values
 
 ## Datasets Summary
 

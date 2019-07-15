@@ -51,7 +51,7 @@ Detecting and Classifying Malicious URLs using Deep Learning Techniques
 | Framework        | Accuracy (%) |
 | ---------------- | -----------: |
 | Fastai-Pytorch   |        97.08 |
-| Keras-Tensorflow |           \* |
+| Keras-Tensorflow |        88.89 |
 | Keras-Theano     |           \* |
 
 ### Binary-class classification (All.csv)

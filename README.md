@@ -21,7 +21,7 @@ Detecting and Classifying Malicious URLs using Deep Learning Techniques
 | URL Type   | Total |
 | ---------- | ----: |
 | benign     |  7781 |
-| Defacement |  7930 |
+| defacement |  7930 |
 | malware    |  6712 |
 | phishing   |  7586 |
 | spam       |  6698 |
@@ -30,7 +30,7 @@ Detecting and Classifying Malicious URLs using Deep Learning Techniques
 
 -   perfomance results using various deep learning frameworks are compared
 
-## Fastai-Pytorch
+## fast.ai
 
 -   https://www.fast.ai/
 -   uses PyTorch (https://pytorch.org/) as the backend
@@ -50,8 +50,8 @@ Detecting and Classifying Malicious URLs using Deep Learning Techniques
 
 | Framework        | Accuracy (%) |
 | ---------------- | -----------: |
-| Fastai-Pytorch   |        97.08 |
-| Keras-Tensorflow |        96.37 |
+| fast.ai   |        97.08 |
+| Keras-TensorFlow |        96.37 |
 | Keras-Theano     |           \* |
 
 ### Binary-class classification (All.csv)
@@ -60,10 +60,10 @@ Detecting and Classifying Malicious URLs using Deep Learning Techniques
 
 | Framework        | Accuracy (%) |
 | ---------------- | -----------: |
-| Fastai-Pytorch   |        98.83 |
-| Keras-Tensorflow |        98.62 |
+| fast.ai   |        98.83 |
+| Keras-TensorFlow |        98.62 |
 | Keras-Theano     |           \* |
 
 # References
 
--   Mohammad Saiful Islam Mamun, Mohammad Ahmad Rathore, Arash Habibi Lashkari, Natalia Stakhanova and Ali A. Ghorbani, "Detecting Malicious URLs Using Lexical Analysis", Network and System Security, Springer International Publishing, P467-482, 2016.
+1.   Mohammad Saiful Islam Mamun, Mohammad Ahmad Rathore, Arash Habibi Lashkari, Natalia Stakhanova and Ali A. Ghorbani, "Detecting Malicious URLs Using Lexical Analysis", Network and System Security, Springer International Publishing, P467-482, 2016.

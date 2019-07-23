@@ -9,7 +9,9 @@ Detecting and Classifying Malicious URLs using Deep Learning Techniques
 
 ## Data Cleanup
 
--   dropped samples with Infinity and NaN values
+-   The data for TensorFlow needed to be cleaned in way that would be easier for the ai to learn. This can be done by simply dropping samples with Infinity and NaN values, then converting the data into tensors. This is done by re-arranging the data into large arrays of 1s and 0s that the ai can understand.
+
+- The data for Fast.AI must also be cleaned of NaN and Infinity values. Fortunately, however, after this is completed the AI should be able to read in the remainder of the data.
 
 ## Datasets Summary
 
@@ -30,7 +32,7 @@ Detecting and Classifying Malicious URLs using Deep Learning Techniques
 
 -   perfomance results using various deep learning frameworks are compared
 
-## fast.ai
+## Fast.AI
 
 -   https://www.fast.ai/
 -   uses PyTorch (https://pytorch.org/) as the backend
@@ -50,13 +52,13 @@ Detecting and Classifying Malicious URLs using Deep Learning Techniques
 
 | Framework        | Accuracy (%) |
 | ---------------- | -----------: |
-| fast.ai   |        97.08 |
+| Fast.AI   |        97.08 |
 | Keras-TensorFlow |        96.37 |
 | Keras-Theano     |           \* |
 
 ### Binary-class classification (All.csv)
 
--   labelled all malicious types as 1 and benign as 0
+-   labeled all malicious types as 1 and benign as 0
 
 | Framework        | Accuracy (%) |
 | ---------------- | -----------: |

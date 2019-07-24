@@ -1,5 +1,4 @@
-All.csv_1563300914_categorical results...	accuracy: 91.77 loss: .2379
-All.csv_1563300914_binary results...	accuracy: 97.61 loss: .0658
-
-All.csv_1563307746_categorical results...	accuracy: 91.63 loss: 0.23
-All.csv_1563307746_binary results...	accuracy: 97.63 loss: 0.07
+All.csv_1563922669_categorical results...	accuracy: 95.44 loss: 0.13 time_elapsed: 12 min 733.9077186584473 sec
+All.csv_1563923357_binary results...	accuracy: 98.78 loss: 0.04 time_elapsed: 11 min 685.4762213230133 sec
+All.csv_1563926109_categorical results...	accuracy: 94.61 loss: 0.15 time_elapsed: 10 min 655.5038816928864 sec
+All.csv_1563926856_binary results...	accuracy: 98.59 loss: 0.04 time_elapsed: 12 min 747.76748919487 sec

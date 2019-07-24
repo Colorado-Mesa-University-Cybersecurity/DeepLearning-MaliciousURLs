@@ -9,16 +9,14 @@ Detecting and Classifying Malicious URLs using Deep Learning Techniques
 
 ## Data Cleanup
 
--   The data for TensorFlow needed to be cleaned in way that would be easier for the ai to learn. This can be done by simply dropping samples with Infinity and NaN values, then converting the data into tensors. This is done by re-arranging the data into large arrays of 1s and 0s that the ai can understand.
-
-- The data for Fast.AI must also be cleaned of NaN and Infinity values. Fortunately, however, after this is completed the AI should be able to read in the remainder of the data.
+-   dropped samples with NaN and Infifinity and mising values
 
 ## Datasets Summary
 
 ### All.csv
 
 -   labeled 5 URL types with total 36697 samples
-    -   build model to classify malicious URLs
+    -   goal is to build model that dectets and classifies malicious URLs
 
 | URL Type   | Total |
 | ---------- | ----: |
@@ -52,7 +50,7 @@ Detecting and Classifying Malicious URLs using Deep Learning Techniques
 
 | Framework        | Accuracy (%) |
 | ---------------- | -----------: |
-| Fast.AI   |        97.08 |
+| Fast.AI          |        97.08 |
 | Keras-TensorFlow |        96.37 |
 | Keras-Theano     |           \* |
 
@@ -62,10 +60,10 @@ Detecting and Classifying Malicious URLs using Deep Learning Techniques
 
 | Framework        | Accuracy (%) |
 | ---------------- | -----------: |
-| fast.ai   |        98.83 |
+| fast.ai          |        98.83 |
 | Keras-TensorFlow |        98.62 |
 | Keras-Theano     |           \* |
 
 # References
 
-1.   Mohammad Saiful Islam Mamun, Mohammad Ahmad Rathore, Arash Habibi Lashkari, Natalia Stakhanova and Ali A. Ghorbani, "Detecting Malicious URLs Using Lexical Analysis", Network and System Security, Springer International Publishing, P467-482, 2016.
+1.  Mohammad Saiful Islam Mamun, Mohammad Ahmad Rathore, Arash Habibi Lashkari, Natalia Stakhanova and Ali A. Ghorbani, "Detecting Malicious URLs Using Lexical Analysis", Network and System Security, Springer International Publishing, P467-482, 2016.

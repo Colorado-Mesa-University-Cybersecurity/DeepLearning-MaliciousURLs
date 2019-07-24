@@ -1,4 +1,4 @@
-# DeepLearning Malicious URLs
+# Deep Learning Malicious URLs
 
 Detecting and Classifying Malicious URLs using Deep Learning Techniques
 

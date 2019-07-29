@@ -20,11 +20,11 @@ Detecting and Classifying Malicious URLs using Deep Learning Techniques
 
 | URL Type   | Total |
 | ---------- | ----: |
-| benign     |  7781 |
-| defacement |  7930 |
-| malware    |  6712 |
-| phishing   |  7586 |
-| spam       |  6698 |
+| benign     | 7,781 |
+| defacement | 7.930 |
+| malware    | 6,712 |
+| phishing   | 7,586 |
+| spam       | 6,698 |
 
 # Deep Learning Frameworks
 

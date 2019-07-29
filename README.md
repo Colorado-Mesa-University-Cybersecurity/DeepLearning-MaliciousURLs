@@ -48,21 +48,21 @@ Detecting and Classifying Malicious URLs using Deep Learning Techniques
 
 -   classification of URL types
 
-| Framework        | Accuracy (%) |
-| ---------------- | -----------: |
-| Fast.AI          |        97.08 |
-| Keras-TensorFlow |        96.37 |
-| Keras-Theano     |           \* |
+| Framework        | CPU Accuracy (%) | GPU Accuracy (%) | TPU Accuracy (%) |
+| ---------------- | ---------------: | ---------------: | ---------------: |
+| Fast.AI          |            97.08 |            97.23 |            97.26 |
+| Keras-TensorFlow |            96.37 |            95.79 |                  |
+| Keras-Theano     |               \* |               \* |               \* |
 
 ### Binary-class classification (All.csv)
 
 -   labeled all malicious types as 1 and benign as 0
 
-| Framework        | Accuracy (%) |
-| ---------------- | -----------: |
-| fast.ai          |        98.83 |
-| Keras-TensorFlow |        98.62 |
-| Keras-Theano     |           \* |
+| Framework        | CPU Accuracy (%) | GPU Accuracy (%) | TPU Accuracy (%) |
+| ---------------- | ---------------: | ---------------: | ---------------: |
+| Fast.AI          |            98.83 |            98.62 |            98.73 |
+| Keras-TensorFlow |            98.62 |            98.70 |                  |
+| Keras-Theano     |               \* |               \* |               \* |
 
 # References
 

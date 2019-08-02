@@ -1,7 +1,8 @@
-# Deep Learning Models to Detect and Classify Malicious URLs
+# Machine Learning Models to Detect and Classify Malicious URLs
 
-This research project compares the accuracies of varioius machine and deep learning frameworks in detecting
-and classifying malicious URLs using lexcial features.
+## Introduction
+
+This research project compares the accuracies of varioius machine algorithms and deep learning frameworks in detecting and classifying malicious URLs using lexcial features.
 
 Experiments results show that ensemble-based classifier such as Random Forest not only outperforms 8 other traditional machine learning classifiers but also some cutting-edge deep neural network frameworks such as
 TensorFlow and PyTorch in detecting and classifying malicious URLs using lexical features.
@@ -16,7 +17,7 @@ TensorFlow and PyTorch in detecting and classifying malicious URLs using lexical
 -   dropped samples and attributes with NaN, Infifinity and mising values
 -   removed whitespaces from column/attribute names
 
-## Datasets Summary
+## Dataset Summary
 
 -   labeled 5 URL types with total 36,707 samples (before cleanup)
 -   consists of 79 lexical features extracted from URLs
@@ -38,15 +39,15 @@ TensorFlow and PyTorch in detecting and classifying malicious URLs using lexical
 ## Machine Learning Algorithms
 
 -   perfomance results using various machine learning algorithms and deep learning frameworks are compared
--   authors of the dataset[1] have used 3 classifiers
+-   authors of the dataset[1] have evaluated 3 classifiers
     -   C4.5 (Decision Tree)
     -   KNN (K-Nearest Neighbors)
     -   RF (Random Forest)
-    -   RF achieved the best results
+    -   RF achieved the best overall results
         -   0.97 Precision and 0.97 Recall on Multi-class
-        -   0.99 Precision and 0.99 on (Single-class)
--   we evaluate 9 algorithms
-    1. Logistic Regression (LR)
+        -   ~ 0.99 Precision and 0.99 Recall on (Single-class)
+-   we evaluate 9 ML classifiers provided in sci-kit learn framework
+    1.  Logistic Regression (LR)
     -   Linear Discriminant Analysis (LDA)
     -   K-Nearest Neighbors (KNN)
     -   Classification and Regression Trees (CART)
@@ -55,23 +56,29 @@ TensorFlow and PyTorch in detecting and classifying malicious URLs using lexical
     -   Random Forest (RF)
     -   Decision Tree (DT)
     -   Ada Boost (AB)
--   2 simple linear classifiers (LR and LDA)
+-   2 linear classifiers (LR and LDA)
 -   5 nonlinear (KNN, CART, NB, SVM, and DT)
 -   2 Ensemble-based (RF, AB)
 
 ## Deep Learning Frameworks
 
-### fast.ai
+### fast.ai & PyTorch
 
--   https://www.fast.ai/
--   uses PyTorch (https://pytorch.org/) as the backend
+-   fast.ai provides high level Python API wrapper over PyTorch with the goal of making deep learning easier to use
+-   PyTorch is an open-source Python version of Torch machine learning framework developed by Facebook
+-   PyTorch uses dynamic computational graphs (a.k.a. Define-by-Run approach) which let you process variable-length inputs and outputs
+-   network is defined dynamically via the actual forward computation
 
-### Keras
+### Keras, TensorFlow & Theano
 
--   https://keras.io/
--   using Tensorflow and Theano as backend
--   https://www.tensorflow.org/
--   https://github.com/Theano/Theano
+-   Keras is an open-source high-level neural networks API, written in Python and cabable of running on top of TensorFlow, CNTK, or Theano
+-   Keras allows for easy and fast prototyping
+    -   through user friendliness, modularity, and extensibility
+    -   runs seamlessly on CPU and GPU
+-   we experimented with TensorFlow and Theano as backend
+-   TensorFlow is an open-source ML framework developed by Google
+-   TensorFlow uses static computational graphs (a.k.a. Define-and-Run approach)
+-   Theano is no longer maintained
 
 ## Model Evaluations
 
@@ -216,6 +223,10 @@ weighted avg       0.99      0.99      0.99      7340
 
 # References
 
-1.  Mohammad Saiful Islam Mamun, Mohammad Ahmad Rathore, Arash Habibi Lashkari, Natalia Stakhanova and Ali A. Ghorbani, "Detecting Malicious URLs Using Lexical Analysis", Network and System Security, Springer International Publishing, P467-482, 2016.
+1.  Mohammad Saiful Islam Mamun, Mohammad Ahmad Rathore, Arash Habibi Lashkari, Natalia Stakhanova and Ali A. Ghorbani, "Detecting Malicious URLs Using Lexical Analysis", Network and System Security, Springer International Publishing, P467-482, 2016
 
 -   Your First Machine Learning Project in Python Step-by-Step - https://machinelearningmastery.com/machine-learning-in-python-step-by-step/
+-   Define-by-Run - https://docs.chainer.org/en/stable/guides/define_by_run.html
+-   TensorFlow: Static Graphs - https://pytorch.org/tutorials/beginner/pytorch_with_examples.html
+-   Home - Keras Documentation - https://keras.io/
+-   TensorFlow | TensorFlow - https://www.tensorflow.org/

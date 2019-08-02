@@ -148,11 +148,11 @@ weighted avg       0.97      0.97      0.97      7340
 #### Results on Dataset after Dropping NaN Rows
 
 -   Comparision of Algorithms using Box plot
-    [](images/MLComparisonsDroppedRowsBinary.png)
+    ![](<./images/MLComparisonsDroppedRowsBinary.png>)
 
 -   Validation Results from Best Classifer (Random Forest)
 -   Confusion Matrix
-    [](images/RFConfusionDroppedRowsBinary.png)
+    ![](<./images/RFConfusionDroppedRowsBinary.png>)
 -   Classification Report:
 
 ```
@@ -169,11 +169,11 @@ weighted avg       0.99      0.99      0.99      3797
 #### Results on Dataset after Dropping NaN Columns
 
 -   Comparision of Algorithms using Box-plot
-    [](images/MLComparisonsDroppedColsBinary.png)
+    ![](<./images/MLComparisonsDroppedColsBinary.png>)
 
 -   Validation Results from Best Classifer (Random Forest)
 -   Confusion Matrix
-    [](images/RFConfusionDroppedColsBinary.png)
+    ![](<./images/RFConfusionDroppedColsBinary.png>)
 -   Classification Report:
 
 ```

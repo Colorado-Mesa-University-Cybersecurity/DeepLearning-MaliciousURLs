@@ -1,6 +1,6 @@
 # Deep Learning Models to Detect and Classify Malicious URLs
 
-This research project studies the efficiencies of varioius deep learning frameworks in detecting
+This research project compares the accuracies of varioius machine and deep learning frameworks in detecting
 and classifying malicious URLs using lexcial features.
 
 ## Dataset
@@ -10,32 +10,37 @@ and classifying malicious URLs using lexcial features.
 
 ## Data Cleanup
 
--   dropped samples with NaN and Infifinity and mising values
+-   dropped samples and attributes with NaN, Infifinity and mising values
+-   removed whitespaces from column/attribute names
 
 ## Datasets Summary
 
 -   labeled 5 URL types with total 36,707 samples (before cleanup)
 -   consists of 79 lexical features extracted from URLs
--   table shows original sample counts (Total) and New Totals (after data cleanup)
--
+-   table below shows original sample counts (Total) and New Totals (after data cleanup)
+-   Total (Dropping NaN Rows) - remaining total samples after dropping samples with NaN values
+    -   ~17K rows were dropped
+-   Total (Dropping NaN Cols) - remaining total samples after dropping columns/attributes with NaN values
+    -   7 attributes are dropped as a result with total 72 attributes remaining
 
-| File    | URL Type   | Total | Total (Dropped NaN Rows) | Total (Dropped NaN Cols) |
-| ------- | ---------- | ----: | -----------------------: | -----------------------: |
-| All.csv | benign     | 7,781 |                    2,709 |                          |
-|         | defacement | 7.930 |                    2,477 |                          |
-|         | malware    | 6,712 |                    4,440 |                          |
-|         | phishing   | 7,586 |                    4,014 |                          |
-|         | spam       | 6,698 |                    5,342 |                          |
-|         | malicious  |       |                          |                    28916 |
+| Dataset | URL Type   |  Total | Total (Dropping NaN Rows) | Total (Dropping NaN Cols) |
+| ------- | ---------- | -----: | ------------------------: | ------------------------: |
+| All.csv | benign     |  7,781 |                     2,709 |                     7,781 |
+|         | defacement |  7.930 |                     2,477 |                     7,930 |
+|         | malware    |  6,712 |                     4,440 |                     6,711 |
+|         | phishing   |  7,586 |                     4,014 |                     7,577 |
+|         | spam       |  6,698 |                     5,342 |                     6,698 |
+|         | malicious  | 28,926 |                    16,273 |                    28,916 |
 
 ## Machine Learning Algorithms
 
+-   perfomance results using various machine learning algorithms and deep learning frameworks are compared
 -   authors of the dataset[1] have used
     -   C4.5 (Decision Tree)
     -   KNN (K-Nearest Neighbors)
     -   RF (Random Forest)
     -   RF achieved the best results
-        -   0.97 Precision and 0.97 Recall on multi-class
+        -   0.97 Precision and 0.97 Recall on Multi-class
         -   0.99 Precision and 0.99 on (Single-class)
 -   we evaluate 9 algorithms
     1. Logistic Regression (LR)
@@ -53,14 +58,12 @@ and classifying malicious URLs using lexcial features.
 
 ## Deep Learning Frameworks
 
--   perfomance results using various machine learning algorithms and deep learning frameworks are compared
-
-## fast.ai
+### fast.ai
 
 -   https://www.fast.ai/
 -   uses PyTorch (https://pytorch.org/) as the backend
 
-## Keras
+### Keras
 
 -   https://keras.io/
 -   using Tensorflow and Theano as backend
@@ -70,14 +73,64 @@ and classifying malicious URLs using lexcial features.
 ## Model Evaluations
 
 -   use 10-fold cross validation to estimate accuracy results
--   split out dataset into 10 parts, train on 9 and test on 1 and repeat for all combination of train-test splits
+-   split dataset into 10 parts, train on 9 and test on 1 and repeat for all combination of train-test splits
 -   calculate the average accuracy
 
-## Results
+## Experiments and Results
 
-### Multi-class classification (All.csv)
+### Multi-class Classification (All.csv)
 
--   classification of URL types
+-   classification of URL types (benign, malware, spam, phishing, defacement)
+
+### Machine Learning Algorithm Results
+
+#### Results on Dataset after Dropping NaN Rows
+
+-   Comparision of Algorithms using Box plot
+    [](images/MLComparisonsDroppedRows.png)
+
+-   Validation Results from Best Classifer (Random Forest)
+-   Confusion Matrix
+    [](images/RFConfusionDroppedRows.png)
+-   Classification Report:
+
+    |              | precision | recall | f1-score | support |
+    | ------------ | --------- | -----: | -------: | ------: |
+    | defacement   | 0.97      |   0.95 |     0.96 |     526 |
+    | benign       | 0.95      |   0.97 |     0.96 |     546 |
+    | malware      | 0.98      |   0.98 |     0.98 |     913 |
+    | phishing     | 0.91      |   0.93 |     0.92 |     764 |
+    | spam         | 0.99      |   0.98 |     0.98 |    1048 |
+    |              |           |        |          |         |
+    | accuracy     |           |        |     0.96 |    3797 |
+    | macro avg    | 0.96      |   0.96 |     0.96 |    3797 |
+    | weighted avg | 0.96      |   0.96 |     0.96 |    3797 |
+
+#### Results on Dataset after Dropping NaN Columns
+
+-   Comparision of Algorithms using Box-plot
+    [](images/MLComparisonsDroppedCols.png)
+
+-   Validation Results from Best Classifer (Random Forest)
+-   Confusion Matrix
+    [](images/RFConfusionDroppedCols.png)
+-   Classification Report:
+
+```
+              precision    recall  f1-score   support
+
+  Defacement       0.98      0.98      0.98      1594
+      benign       0.97      0.98      0.98      1541
+     malware       0.99      0.98      0.98      1367
+    phishing       0.95      0.95      0.95      1523
+        spam       0.99      0.97      0.98      1315
+
+    accuracy                           0.97      7340
+   macro avg       0.97      0.97      0.97      7340
+weighted avg       0.97      0.97      0.97      7340
+```
+
+### Deep Learning Framework Results
 
 | Framework        | CPU Accuracy (%) | GPU Accuracy (%) | TPU Accuracy (%) |
 | ---------------- | ---------------: | ---------------: | ---------------: |
@@ -85,9 +138,56 @@ and classifying malicious URLs using lexcial features.
 | Keras-TensorFlow |            96.37 |            95.79 |            95.60 |
 | Keras-Theano     |               \* |               \* |               \* |
 
-### Binary-class classification (All.csv)
+### Binary-class Classification (All.csv)
 
--   re-labeled defacement, malware, phishing, spam, defacement as malicious type (1) benign as 0
+-   re-labeled defacement, malware, phishing, spam, defacement as malicious type (1) and benign as 0
+-   detecting malicious URLs (malicious Vs benign)
+
+### Machine Learning Algorithm Results
+
+#### Results on Dataset after Dropping NaN Rows
+
+-   Comparision of Algorithms using Box plot
+    [](images/MLComparisonsDroppedRowsBinary.png)
+
+-   Validation Results from Best Classifer (Random Forest)
+-   Confusion Matrix
+    [](images/RFConfusionDroppedRowsBinary.png)
+-   Classification Report:
+
+```
+              precision    recall  f1-score   support
+
+      benign       0.95      0.98      0.97       546
+   malicious       1.00      0.99      0.99      3251
+
+    accuracy                           0.99      3797
+   macro avg       0.97      0.99      0.98      3797
+weighted avg       0.99      0.99      0.99      3797
+```
+
+#### Results on Dataset after Dropping NaN Columns
+
+-   Comparision of Algorithms using Box-plot
+    [](images/MLComparisonsDroppedColsBinary.png)
+
+-   Validation Results from Best Classifer (Random Forest)
+-   Confusion Matrix
+    [](images/RFConfusionDroppedColsBinary.png)
+-   Classification Report:
+
+```
+              precision    recall  f1-score   support
+
+      benign       0.97      0.98      0.98      1541
+   malicious       0.99      0.99      0.99      5799
+
+    accuracy                           0.99      7340
+   macro avg       0.98      0.99      0.98      7340
+weighted avg       0.99      0.99      0.99      7340
+```
+
+### Deep Learning Framework Results
 
 | Framework        | CPU Accuracy (%) | GPU Accuracy (%) | TPU Accuracy (%) |
 | ---------------- | ---------------: | ---------------: | ---------------: |

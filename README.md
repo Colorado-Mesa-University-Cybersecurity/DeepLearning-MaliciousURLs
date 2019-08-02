@@ -35,7 +35,7 @@ and classifying malicious URLs using lexcial features.
 ## Machine Learning Algorithms
 
 -   perfomance results using various machine learning algorithms and deep learning frameworks are compared
--   authors of the dataset[1] have used
+-   authors of the dataset[1] have used 3 classifiers
     -   C4.5 (Decision Tree)
     -   KNN (K-Nearest Neighbors)
     -   RF (Random Forest)
@@ -87,11 +87,11 @@ and classifying malicious URLs using lexcial features.
 #### Results on Dataset after Dropping NaN Rows
 
 -   Comparision of Algorithms using Box plot
-    [](images/MLComparisonsDroppedRows.png)
+    ![](./images/MLComparisonsDroppedRows.png)
 
 -   Validation Results from Best Classifer (Random Forest)
 -   Confusion Matrix
-    [](images/RFConfusionDroppedRows.png)
+    ![](./images/RFConfusionDroppedRows.png)
 -   Classification Report:
 
     |              | precision | recall | f1-score | support |
@@ -109,11 +109,11 @@ and classifying malicious URLs using lexcial features.
 #### Results on Dataset after Dropping NaN Columns
 
 -   Comparision of Algorithms using Box-plot
-    [](images/MLComparisonsDroppedCols.png)
+    ![](./images/MLComparisonsDroppedCols.png)
 
 -   Validation Results from Best Classifer (Random Forest)
 -   Confusion Matrix
-    [](images/RFConfusionDroppedCols.png)
+    ![](./images/RFConfusionDroppedCols.png)
 -   Classification Report:
 
 ```

@@ -3,6 +3,9 @@
 This research project compares the accuracies of varioius machine and deep learning frameworks in detecting
 and classifying malicious URLs using lexcial features.
 
+Experiments results show that ensemble-based classifier such as Random Forest not only outperforms 8 other traditional machine learning classifiers but also some cutting-edge deep neural network frameworks such as
+TensorFlow and PyTorch in detecting and classifying malicious URLs using lexical features.
+
 ## Dataset
 
 -   downloaded from: https://www.unb.ca/cic/datasets/url-2016.html
@@ -23,14 +26,14 @@ and classifying malicious URLs using lexcial features.
 -   Total (Dropping NaN Cols) - remaining total samples after dropping columns/attributes with NaN values
     -   7 attributes are dropped as a result with total 72 attributes remaining
 
-| Dataset | URL Type   |  Total | Total (Dropping NaN Rows) | Total (Dropping NaN Cols) |
-| ------- | ---------- | -----: | ------------------------: | ------------------------: |
-| All.csv | benign     |  7,781 |                     2,709 |                     7,781 |
-|         | defacement |  7.930 |                     2,477 |                     7,930 |
-|         | malware    |  6,712 |                     4,440 |                     6,711 |
-|         | phishing   |  7,586 |                     4,014 |                     7,577 |
-|         | spam       |  6,698 |                     5,342 |                     6,698 |
-|         | malicious  | 28,926 |                    16,273 |                    28,916 |
+| Dataset | URL Type   |  Total | Dropping NaN Rows | Dropping NaN Cols |
+| ------- | ---------- | -----: | ----------------: | ----------------: |
+| All.csv | benign     |  7,781 |             2,709 |             7,781 |
+|         | defacement |  7.930 |             2,477 |             7,930 |
+|         | malware    |  6,712 |             4,440 |             6,711 |
+|         | phishing   |  7,586 |             4,014 |             7,577 |
+|         | spam       |  6,698 |             5,342 |             6,698 |
+|         | malicious  | 28,926 |            16,273 |            28,916 |
 
 ## Machine Learning Algorithms
 

@@ -1,11 +1,12 @@
-# Deep Learning Malicious URLs
+# Deep Learning Models to Detect and Classify Malicious URLs
 
-Detecting and Classifying Malicious URLs using Deep Learning Techniques
+This research project studies the efficiencies of varioius deep learning frameworks in detecting
+and classifying malicious URLs using lexcial features.
 
 ## Dataset
 
 -   downloaded from: https://www.unb.ca/cic/datasets/url-2016.html
--   run FastAI-Experiments.ipynb jupyter notebook to download dataset
+-   run Baseline-Experiments.ipynb jupyter notebook to download dataset using provided Bash script
 
 ## Data Cleanup
 
@@ -13,24 +14,48 @@ Detecting and Classifying Malicious URLs using Deep Learning Techniques
 
 ## Datasets Summary
 
-### All.csv
+-   labeled 5 URL types with total 36,707 samples (before cleanup)
+-   consists of 79 lexical features extracted from URLs
+-   table shows original sample counts (Total) and New Totals (after data cleanup)
+-
 
--   labeled 5 URL types with total 36697 samples
-    -   goal is to build model that dectets and classifies malicious URLs
+| File    | URL Type   | Total | Total (Dropped NaN Rows) | Total (Dropped NaN Cols) |
+| ------- | ---------- | ----: | -----------------------: | -----------------------: |
+| All.csv | benign     | 7,781 |                    2,709 |                          |
+|         | defacement | 7.930 |                    2,477 |                          |
+|         | malware    | 6,712 |                    4,440 |                          |
+|         | phishing   | 7,586 |                    4,014 |                          |
+|         | spam       | 6,698 |                    5,342 |                          |
+|         | malicious  |       |                          |                    28916 |
 
-| URL Type   | Total |
-| ---------- | ----: |
-| benign     | 7,781 |
-| defacement | 7.930 |
-| malware    | 6,712 |
-| phishing   | 7,586 |
-| spam       | 6,698 |
+## Machine Learning Algorithms
 
-# Deep Learning Frameworks
+-   authors of the dataset[1] have used
+    -   C4.5 (Decision Tree)
+    -   KNN (K-Nearest Neighbors)
+    -   RF (Random Forest)
+    -   RF achieved the best results
+        -   0.97 Precision and 0.97 Recall on multi-class
+        -   0.99 Precision and 0.99 on (Single-class)
+-   we evaluate 9 algorithms
+    1. Logistic Regression (LR)
+    -   Linear Discriminant Analysis (LDA)
+    -   K-Nearest Neighbors (KNN)
+    -   Classification and Regression Trees (CART)
+    -   Gaussian Naive Bayes (NB)
+    -   Support Vector Machines (SVM)
+    -   Random Forest (RF)
+    -   Decision Tree (DT)
+    -   Ada Boost (AB)
+-   2 simple linear classifiers (LR and LDA)
+-   5 nonlinear (KNN, CART, NB, SVM, and DT)
+-   2 Ensemble-based (RF, AB)
 
--   perfomance results using various deep learning frameworks are compared
+## Deep Learning Frameworks
 
-## Fast.AI
+-   perfomance results using various machine learning algorithms and deep learning frameworks are compared
+
+## fast.ai
 
 -   https://www.fast.ai/
 -   uses PyTorch (https://pytorch.org/) as the backend
@@ -42,7 +67,13 @@ Detecting and Classifying Malicious URLs using Deep Learning Techniques
 -   https://www.tensorflow.org/
 -   https://github.com/Theano/Theano
 
-# Results
+## Model Evaluations
+
+-   use 10-fold cross validation to estimate accuracy results
+-   split out dataset into 10 parts, train on 9 and test on 1 and repeat for all combination of train-test splits
+-   calculate the average accuracy
+
+## Results
 
 ### Multi-class classification (All.csv)
 
@@ -56,7 +87,7 @@ Detecting and Classifying Malicious URLs using Deep Learning Techniques
 
 ### Binary-class classification (All.csv)
 
--   labeled all malicious types as 1 and benign as 0
+-   re-labeled defacement, malware, phishing, spam, defacement as malicious type (1) benign as 0
 
 | Framework        | CPU Accuracy (%) | GPU Accuracy (%) | TPU Accuracy (%) |
 | ---------------- | ---------------: | ---------------: | ---------------: |
@@ -67,3 +98,5 @@ Detecting and Classifying Malicious URLs using Deep Learning Techniques
 # References
 
 1.  Mohammad Saiful Islam Mamun, Mohammad Ahmad Rathore, Arash Habibi Lashkari, Natalia Stakhanova and Ali A. Ghorbani, "Detecting Malicious URLs Using Lexical Analysis", Network and System Security, Springer International Publishing, P467-482, 2016.
+
+-   Your First Machine Learning Project in Python Step-by-Step - https://machinelearningmastery.com/machine-learning-in-python-step-by-step/

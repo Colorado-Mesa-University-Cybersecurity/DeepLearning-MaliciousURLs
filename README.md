@@ -1,7 +1,5 @@
 # Machine Learning Models to Detect and Classify Malicious URLs
 
-- Test
-
 ## Introduction
 
 This research project compares the accuracies of varioius machine algorithms and deep learning frameworks in detecting and classifying malicious URLs using lexcial features.

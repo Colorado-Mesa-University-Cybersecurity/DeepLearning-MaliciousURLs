@@ -221,7 +221,7 @@ weighted avg       0.99      0.99      0.99      7340
 | Keras-TensorFlow |            98.62 |            98.70 |            98.79 |
 | Keras-Theano     |               \* |               \* |               \* |
 
-# References
+## References
 
 1.  Mohammad Saiful Islam Mamun, Mohammad Ahmad Rathore, Arash Habibi Lashkari, Natalia Stakhanova and Ali A. Ghorbani, "Detecting Malicious URLs Using Lexical Analysis", Network and System Security, Springer International Publishing, P467-482, 2016
 
@@ -231,4 +231,3 @@ weighted avg       0.99      0.99      0.99      7340
 -   Home - Keras Documentation - https://keras.io/
 -   TensorFlow | TensorFlow - https://www.tensorflow.org/
 
-Clay's test push
